@@ -20,7 +20,8 @@ logger = logging.getLogger(__name__)
 @click.option(
     "--model",
     default="svd",
-    help="Model to use. One of: svd, svd_xt, svd_image_decoder, svd_xt_image_decoder",
+    # here it says svd_xt which does not work, while svd-xt works (i am on Windows if that may matter in any sense ^^). Not sure about the others (svd_image_decoder, svd_xt_image_decoder)
+    help="Model to use. One of: svd, svd-xt, svd_image_decoder, svd_xt_image_decoder",
 )
 @click.option(
     "--fps", default=6, type=int, help="FPS for the AI to target when generating video"
